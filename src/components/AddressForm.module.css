@@ -1,0 +1,47 @@
+.formContorl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem 2rem;
+    grid-template-areas: 
+        'title name name name'
+        'phone phone email email'
+        'city address address address';
+    margin-bottom: 2rem;
+}
+
+.inputGroup {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+}
+
+.inputGroup input, select {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 2rem;
+    font-size: 16px;
+}
+
+.name {
+    grid-area: name;
+}
+
+.title {
+    grid-area: title;
+}
+
+.phone {
+    grid-area: phone;
+}
+
+.email {
+    grid-area: email;
+}
+
+.city {
+    grid-area: city;
+}
+
+.address {
+    grid-area: address;
+}

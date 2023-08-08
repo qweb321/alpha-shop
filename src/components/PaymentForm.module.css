@@ -1,0 +1,39 @@
+.formContorl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem 2rem;
+    grid-template-areas: 
+        'name name name .'
+        'number number number .'
+        'date date cardCVC cardCVC';
+    margin-bottom: 2rem;
+}
+
+.inputGroup {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+}
+
+.inputGroup input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 2rem;
+    font-size: 16px;
+}
+
+.name {
+    grid-area: name;
+}
+
+.number {
+    grid-area: number;
+}
+
+.date {
+    grid-area: date;
+}
+
+.cardCVC {
+    grid-area: cardCVC;
+}

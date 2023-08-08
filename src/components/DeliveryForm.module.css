@@ -1,0 +1,23 @@
+.item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.item label {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.2fr;
+}
+
+.shippingContent {
+    margin-left: 2rem;
+    text-align: start;
+}
+
+.shippingPrice {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}

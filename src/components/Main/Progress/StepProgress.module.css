@@ -39,3 +39,9 @@
     margin-top: 12px;
     margin-right: 20px;
 }
+
+@media screen and (max-width: 749.5px) {
+    .lableContainer {
+        display: none;
+    }
+}

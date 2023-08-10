@@ -6,7 +6,7 @@ function StepItem({number, title}) {
             <div className={styles.circleContainer}>
                 <div className={styles.stepNumber}>{number}</div>
             </div>
-            <div className="lableContainer">{title}</div>
+            <div className={styles.lableContainer}>{title}</div>
         </div>
     )
 }

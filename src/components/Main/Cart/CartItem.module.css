@@ -1,0 +1,52 @@
+.productContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2px;
+    margin-bottom: 32px;
+}
+
+.productContainer img {
+    width: 100px;
+    height: 100px;
+    margin-right: 21px;
+}
+
+.productInfo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: flex-start;
+}
+
+.productControlContainer {
+    width: 100%;
+}
+
+.productControl  {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    span {
+        display: inline-block;
+    }
+}
+
+.productName {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    max-width: 60%;
+    margin-right: auto;
+}
+
+.productPrice {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.productAction {
+    display: inline-block;
+}

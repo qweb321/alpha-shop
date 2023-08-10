@@ -24,7 +24,7 @@
 
 .circleContainer {
     height: 24px;
-    width: 24px;
+    min-width: 24px;
     background-color: black;
     border-radius: 50%;
     color: white;
@@ -43,5 +43,9 @@
 @media screen and (max-width: 749.5px) {
     .lableContainer {
         display: none;
+    }
+
+    .stepperContainer {
+        padding: 0 1rem;
     }
 }

@@ -8,51 +8,51 @@ import { ReactComponent as IconToggle } from '../../public/icon/toggle.svg'
 function Header() {
     return (
         <header>
-            <div class={styles.headerContainer}>
+            <div className={styles.headerContainer}>
                 {/* navbar-toggle */}
-                <input id="navbar-toggle" class={styles.navbarToggle} type="checkbox" />
-                <label for="navbar-toggle" class={styles.burgerContainer}>
-                    <IconToggle class={`${styles.iconToggle} ${styles.cursorPoint}`}/>
+                <input id="navbar-toggle" className={styles.navbarToggle} type="checkbox" />
+                <label htmlFor="navbar-toggle" className={styles.burgerContainer}>
+                    <IconToggle className={`${styles.iconToggle} ${styles.cursorPoint}`}/>
                 </label>
 
                 {/* <!-- navbar-menu --> */}
-                <nav class={styles.navbarMenu}>
-                    <ul class={`${styles.navList} ${styles.siteMenuList}`}>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">男款</a>
+                <nav className={styles.navbarMenu}>
+                    <ul className={`${styles.navList} ${styles.siteMenuList}`}>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">男款</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">女款</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">女款</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">最新消息</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">最新消息</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">客製商品</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">客製商品</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">聯絡我們</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">聯絡我們</a>
                         </li>
                     </ul>
-                    <ul class={`${styles.navList} ${styles.siteActionList}`}>
+                    <ul className={`${styles.navList} ${styles.siteActionList}`}>
                         {/* <!-- search --> */}
-                        <li class="nav-item">
-                            <IconSearch class="nav-icon cursor-point"/>                              
+                        <li className="nav-item">
+                            <IconSearch className="nav-icon cursor-point"/>                              
                         </li>
                         {/* <!-- cart --> */}
-                        <li class="nav-item">
-                            <IconCart class="nav-icon cursor-point"/>
+                        <li className="nav-item">
+                            <IconCart className="nav-icon cursor-point"/>
                         </li>
-                        <li id="theme-toggle" class="nav-item"> 
+                        <li id="theme-toggle" className="nav-item"> 
                         {/* <!-- moon --> */}
-                            <IconMoon class="nav-icon cursor-point" />         
+                            <IconMoon className="nav-icon cursor-point" />         
                         {/* <!-- sun --> */}
-                            <IconSun class="nav-icon cursor-point" />         
+                            <IconSun className="nav-icon cursor-point" />         
                         </li>
                     </ul>
                 </nav>
                 {/* <!-- logo --> */}
-                <a class={styles.headerLogo} href="#">
+                <a className={styles.headerLogo} href="#">
                     <IconLogo class="icon-logo cursor-point"/>
                 </a>
 

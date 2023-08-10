@@ -1,0 +1,51 @@
+.siteFooter {
+    background-color: #F6F7F8;
+    margin-top: 120px;
+    padding: 0 15px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footerLogoContainer {
+    margin-top: 126px;
+    margin-bottom: 127px;
+}
+
+.sectionContent a{
+    color: #808080;
+    margin-bottom: 8px;
+    display: block;
+    line-height: 17px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footerSection {
+    margin-top: 64px;
+}
+
+.telInfo {
+    color: #808080;
+    margin-bottom: 8px;
+}
+
+
+.socialIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 749.5px) {
+    .siteFooter {
+        display: none;
+    }
+}

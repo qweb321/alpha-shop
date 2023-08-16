@@ -2,6 +2,7 @@ import CartItem from "./CartItem";
 import styles from './Cart.module.css'
 import productOne from "../../../public/images/product-1.jpg"
 import productTwo from "../../../public/images/product-2.jpg"
+import { useState } from "react";
 
 function Cart() {
     const cartItem = [{
@@ -18,22 +19,39 @@ function Cart() {
         price: 200,
         quantity: 1,
       }]
+
+    const [items, setItem] = useState(cartItem)
+
+      function handleItemQuantity(e){
+        const targetId = e.target.parentElement.id
+        const isMinus = e.target.parentElement.classList.contains("minus");
+        setItem(items =>items.map(item => {
+            if (item.id === targetId) {
+                return {...item, quantity: isMinus ? item.quantity -1 : item.quantity + 1}
+            }else {
+                return item
+            }
+        }))
+        setItem(items => items.filter(item => item.quantity >= 0))
+      }
+    let totalPrice = 0;
+    items.forEach(item => totalPrice += item.quantity * item.price)
     return (
         <section className={styles.cartContainer}>
             <div className={styles.cart}>
                 <h3 className="cartTitle">購物籃</h3>
                 <section className={styles.productList}>
-                        {cartItem.map(item => 
-                            <CartItem {...item} key={item.id}/>
+                        {items.map(item => 
+                            <CartItem {...item} key={item.id} onHandleQuantity={handleItemQuantity}/>
                         )}
                 </section>
-                <section class={`${styles.cartInfo} ${styles.shipping}`}>
-                    <div class="text">運費</div>
-                    <div class="price"></div>
+                <section className={`${styles.cartInfo} ${styles.shipping}`}>
+                    <div className="text">運費</div>
+                    <div className="price">免費</div>
                 </section>
-                <section class={`${styles.cartInfo} ${styles.total}`}>
-                    <div class="text">小計</div>
-                    <div class="price"></div>
+                <section className={`${styles.cartInfo} ${styles.total}`}>
+                    <div className="text">小計</div>
+                    <div className="price">{totalPrice}</div>
                 </section>
 
             </div>

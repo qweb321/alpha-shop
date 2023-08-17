@@ -40,6 +40,12 @@
     margin-right: 20px;
 }
 
+.active{
+    background-image: url("../../../public/icon/pg-complete.svg");
+    color: transparent;
+}
+
+
 @media screen and (max-width: 749.5px) {
     .lableContainer {
         display: none;

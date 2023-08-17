@@ -4,7 +4,7 @@ function DeliveryForm() {
     return (
         <>
         <h2>運送方式</h2>
-            <div class="form-body">
+            <div className="form-body">
                 <div className={styles.item}>
                     <input type="radio" id="standardShipping" name="deliveryMethod" value="free" />
                     <label htmlFor="standardShipping">

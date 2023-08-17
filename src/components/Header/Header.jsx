@@ -53,7 +53,7 @@ function Header() {
                 </nav>
                 {/* <!-- logo --> */}
                 <a className={styles.headerLogo} href="#">
-                    <IconLogo class="icon-logo cursor-point"/>
+                    <IconLogo className="icon-logo cursor-point"/>
                 </a>
 
             </div>

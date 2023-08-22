@@ -3,14 +3,14 @@ import { OrderContext } from '../../../context/OrderContext';
 import { useContext } from 'react';
 
 function DeliveryForm() {
-    const { handleOrderInfo } = useContext(OrderContext)
+    const { handleOrderInfo, step } = useContext(OrderContext)
 
     return (
         <>
         <h2>運送方式</h2>
             <div className="form-body">
                 <div className={styles.item}>
-                    <input type="radio" id="standardShipping" name="deliveryMethod" data-price={0} onChange={(e) => handleOrderInfo(e, 2)}/>
+                    <input type="radio" id="standardShipping" name="deliveryMethod" data-price={0} onChange={(e) => handleOrderInfo(e, step)}/>
                     <label htmlFor="standardShipping">
                         <div className={styles.shippingContent}>
                             <div className="formItemTitle">標準運送</div>
@@ -20,7 +20,7 @@ function DeliveryForm() {
                     </label>
                 </div>
                 <div className={styles.item}>
-                    <input type="radio" id="dhlShipping" name="deliveryMethod" data-price={500} onChange={(e) => handleOrderInfo(e, 2)}/>
+                    <input type="radio" id="dhlShipping" name="deliveryMethod" data-price={500} onChange={(e) => handleOrderInfo(e, step)}/>
                     <label htmlFor="dhlShipping">
                         <div className={styles.shippingContent}>
                             <div className="formItemTitle">DHL 貨運</div>

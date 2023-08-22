@@ -23,6 +23,18 @@ export function OrderProvider({children}) {
         }
     })
 
+    const [step, setStep] = useState(1)
+
+    function handleStep(e) {
+        const isNext = e.target.classList.contains('nextStepBtn')
+        if (step === 3) {
+           return setStep(isNext ? step : step -1)
+        }
+       
+        setStep(isNext ? step + 1 : step - 1)
+        
+    }
+
     function handleOrderInfo(e, step) {
         let objectName = ''
         if (step === 1) {
@@ -52,7 +64,14 @@ export function OrderProvider({children}) {
         }
     }
 
+    const value ={
+        orderInfo,
+        step,
+        handleStep,
+        handleOrderInfo
+    }
+
     return (
-        <OrderContext.Provider value={{orderInfo, handleOrderInfo}}>{children}</OrderContext.Provider>
+        <OrderContext.Provider value={value}>{children}</OrderContext.Provider>
     )
 }

@@ -2,33 +2,33 @@ import styles from "./AddressForm.module.css"
 import { OrderContext } from "../../../context/OrderContext";
 import { useContext } from "react";
 function AddressForm() {
-    const { handleOrderInfo } = useContext(OrderContext)
+    const { handleOrderInfo, step } = useContext(OrderContext)
     return (
         <>
         <h2>寄送地址</h2>
         <div className={styles.formContorl}>
             <div className={`${styles.inputGroup} ${styles.title}`} >
                 <label htmlFor="title" className="inputLabel">稱謂</label>
-                <select name="title" id="title" onChange={(e) => handleOrderInfo(e, 1)}>
+                <select name="title" id="title" onChange={(e) => handleOrderInfo(e, step)}>
                     <option value="先生">先生</option>
                     <option value="小姐">小姐</option>
                 </select>
             </div>
             <div className={`${styles.inputGroup} ${styles.name}`}>
                 <label htmlFor="name" className="inputLabel">姓名</label>
-                <input type="text" name="name" id="name" onChange={(e) => handleOrderInfo(e, 1)}/>
+                <input type="text" name="name" id="name" onChange={(e) => handleOrderInfo(e, step)}/>
             </div>
             <div className={`${styles.inputGroup} ${styles.phone}`}>
                 <label htmlFor="phone" className="inputLabel">電話</label>
-                <input type="tel" name="phone" id="phone" onChange={(e) => handleOrderInfo(e, 1)}/>
+                <input type="tel" name="phone" id="phone" onChange={(e) => handleOrderInfo(e, step)}/>
             </div>
             <div className={`${styles.inputGroup} ${styles.email}`}>
                 <label htmlFor="email" className="inputLabel">Email</label>
-                <input type="email" name="email" id="email" onChange={(e) => handleOrderInfo(e, 1)}/>
+                <input type="email" name="email" id="email" onChange={(e) => handleOrderInfo(e, step)}/>
             </div>
             <div className={`${styles.inputGroup} ${styles.city}`}>
                 <label htmlFor="city" className="inputLabel">縣市</label>
-                <select required onChange={(e) => handleOrderInfo(e, 1)}>
+                <select name="city" required onChange={(e) => handleOrderInfo(e, step)}>
                     <option value="">請選擇縣市</option>
                     <option value="KLU">基隆市</option>
                     <option value="TPH">新北市</option>

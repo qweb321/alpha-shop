@@ -3,19 +3,12 @@ import StepProgress from './Progress/StepProgress'
 import StepForm from './Progress/StepForm'
 import Cart from './Cart/Cart'
 import ProgressControl from './Progress/ProgressControl'
-import { useState } from 'react'
+import { useContext } from 'react'
+import { OrderContext } from '../../context/OrderContext'
 
 function Main() {
-    const [step, setStep] = useState(1)
-    function handleStep(e) {
-        const isNext = e.target.classList.contains('nextStepBtn')
-        if (step === 3) {
-           return setStep(isNext ? step : step -1)
-        }
-       
-        setStep(isNext ? step + 1 : step - 1)
-        
-    }
+
+    const { handleStep, step } = useContext(OrderContext)
     return (
         <div className={styles.mainContainer}>
             <section className={styles.registerContainer}>

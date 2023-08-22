@@ -16,7 +16,6 @@ function Main() {
         setStep(isNext ? step + 1 : step - 1)
         
     }
-    console.log(step);
     return (
         <div className={styles.mainContainer}>
             <section className={styles.registerContainer}>

@@ -23,7 +23,7 @@ function Cart() {
                 </section>
                 <section className={`${styles.cartInfo} ${styles.total}`}>
                     <div className="text">小計</div>
-                    <div className="price">{totalPrice}</div>
+                    <div className="price" data-price={totalPrice}>{totalPrice}</div>
                 </section>
 
             </div>

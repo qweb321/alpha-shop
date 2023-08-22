@@ -11,9 +11,9 @@ function CartItem({id, name, img, price, quantity, onHandleQuantity}) {
                 <div className={styles.productPrice}>${price}</div>
                 <div className={styles.productControlContainer}>
                     <div className={styles.productControl}>
-                        <IconMinus className={`${styles.productAction} minus`} id={id} onClick={onHandleQuantity} />
+                        <IconMinus className={`${styles.productAction} minus`} id={id} onClick={() => onHandleQuantity(id, 'minus')} />
                         <span>{quantity}</span>
-                        <IconPlus className={`${styles.productAction} plus`} id={id} onClick={onHandleQuantity} />
+                        <IconPlus className={`${styles.productAction} plus`} id={id} onClick={() => onHandleQuantity(id, 'plus')} />
                     </div>
                 </div>
             </div>

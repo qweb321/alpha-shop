@@ -1,39 +1,11 @@
 import CartItem from "./CartItem";
 import styles from './Cart.module.css'
-import productOne from "../../../public/images/product-1.jpg"
-import productTwo from "../../../public/images/product-2.jpg"
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from '../../../context/CartContext'
 
 function Cart() {
-    const cartItem = [{
-        id: '1',
-        name: '貓咪罐罐',
-        img: productOne,
-        price: 100,
-        quantity: 2,
-      },
-      {
-        id: '2',
-        name: '貓咪干干',
-        img: productTwo,
-        price: 200,
-        quantity: 1,
-      }]
-
-    const [items, setItem] = useState(cartItem)
-
-      function handleItemQuantity(e){
-        const targetId = e.target.parentElement.id
-        const isMinus = e.target.parentElement.classList.contains("minus");
-        setItem(items =>items.map(item => {
-            if (item.id === targetId) {
-                return {...item, quantity: isMinus ? item.quantity -1 : item.quantity + 1}
-            }else {
-                return item
-            }
-        }))
-        setItem(items => items.filter(item => item.quantity >= 0))
-      }
+    const { items, handleItemQuantity } = useContext(CartContext)
+    
     let totalPrice = 0;
     items.forEach(item => totalPrice += item.quantity * item.price)
     return (
